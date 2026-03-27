@@ -8,14 +8,22 @@
 
 <div id="menu">
   <h1>⏳ TIME OBBY</h1>
-  <button onclick="startGame('forest')">🌲 Forest Obby</button>
-  <button onclick="startGame('lava')">🔥 Lava Obby</button>
-  <button onclick="startGame('space')">🚀 Space Obby</button>
+  <button onclick="startGame('forest')">🌲 Forest</button>
+  <button onclick="startGame('lava')">🔥 Lava</button>
+  <button onclick="startGame('space')">🚀 Space</button>
 </div>
 
 <div id="hud" hidden>
-  <span id="levelText"></span>
-  <button onclick="toggleTool()">🛠 Tool</button>
+  <span id="info"></span>
+  <button onclick="toggleShop()">🛒 Shop</button>
+</div>
+
+<div id="shop" hidden>
+  <h3>🛒 Shop</h3>
+  <button onclick="buySkin('cyan',0)">Default (Free)</button>
+  <button onclick="buySkin('gold',50)">Gold (50)</button>
+  <button onclick="buySkin('pink',100)">Pink (100)</button>
+  <button onclick="toggleShop()">Close</button>
 </div>
 
 <canvas id="game" width="900" height="450"></canvas>
