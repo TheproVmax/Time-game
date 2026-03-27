@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Time Control Platformer</title>
+  <title>⏳ Time Obby</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>⏳ Time Control Platformer</h1>
-  <p>⬅️ ➡️ Move | ⬆️ Jump | R Rewind | Space Pause</p>
-  <canvas id="game" width="800" height="400"></canvas>
 
-  <script src="game.js"></script>
+<div id="menu">
+  <h1>⏳ TIME OBBY</h1>
+  <button onclick="startGame('forest')">🌲 Forest Obby</button>
+  <button onclick="startGame('lava')">🔥 Lava Obby</button>
+  <button onclick="startGame('space')">🚀 Space Obby</button>
+</div>
+
+<div id="hud" hidden>
+  <span id="levelText"></span>
+  <button onclick="toggleTool()">🛠 Tool</button>
+</div>
+
+<canvas id="game" width="900" height="450"></canvas>
+
+<script src="game.js"></script>
 </body>
 </html>
