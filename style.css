@@ -886,3 +886,565 @@ footer {
     transition: none !important;
   }
 }
+
+/* Comic section */
+
+.comic-page {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.comic-panel {
+  background: #faf5e8;
+  border: 2px solid #292821;
+  padding: 8px;
+  box-shadow: 3px 4px 0 rgba(40, 35, 25, 0.14);
+}
+
+.panel-wide {
+  grid-column: 1 / -1;
+}
+
+.panel-label {
+  padding: 4px 2px 9px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.comic-scene {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #292821;
+}
+
+.comic-scene * {
+  box-sizing: border-box;
+}
+
+.scene-caption {
+  position: absolute;
+  bottom: 7px;
+  left: 7px;
+  z-index: 5;
+  background: #faf5e8;
+  border: 1px solid #292821;
+  padding: 3px 6px;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.speech {
+  position: absolute;
+  z-index: 6;
+  max-width: 190px;
+  padding: 9px 11px;
+  background: #fffdf4;
+  border: 2px solid #292821;
+  border-radius: 13px;
+  color: #292821;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.speech::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 25px;
+  width: 13px;
+  height: 13px;
+  background: #fffdf4;
+  border-right: 2px solid #292821;
+  border-bottom: 2px solid #292821;
+  transform: rotate(45deg);
+}
+
+.speech-top {
+  top: 10px;
+  left: 12px;
+}
+
+.speech-left {
+  top: 14px;
+  left: 10px;
+}
+
+.speech-right {
+  top: 14px;
+  right: 10px;
+}
+
+.train-scene {
+  background: #343d43;
+}
+
+.night-moon {
+  position: absolute;
+  top: 17px;
+  right: 30px;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #f1e4b9;
+}
+
+.stars {
+  position: absolute;
+  top: 53px;
+  right: 23px;
+  color: #f1e4b9;
+}
+
+.comic-train {
+  position: absolute;
+  bottom: 43px;
+  left: 14%;
+  width: 72%;
+  height: 65px;
+  background: #a34737;
+  border: 3px solid #292821;
+}
+
+.engine-front {
+  position: absolute;
+  top: 11px;
+  left: -17px;
+  width: 17px;
+  height: 39px;
+  background: #a34737;
+  border-left: 3px solid #292821;
+  border-top: 3px solid #292821;
+  border-bottom: 3px solid #292821;
+}
+
+.engine-window {
+  display: inline-block;
+  width: 12%;
+  height: 19px;
+  margin: 9px 0 0 7%;
+  background: #f1e4b9;
+  border: 2px solid #292821;
+}
+
+.engine-wheel {
+  position: absolute;
+  bottom: -15px;
+  left: 12%;
+  width: 23px;
+  height: 23px;
+  border: 4px solid #8d887b;
+  border-radius: 50%;
+  background: #292821;
+}
+
+.wheel-two {
+  left: 44%;
+}
+
+.wheel-three {
+  left: 75%;
+}
+
+.comic-rails {
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+  width: 100%;
+  border-top: 4px solid #c1b7a0;
+}
+
+.comic-rails::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  border-top: 3px solid #c1b7a0;
+}
+
+.signal-scene {
+  background: #d6d0bd;
+}
+
+.signal-pole {
+  position: absolute;
+  left: 70%;
+  bottom: 15px;
+  width: 8px;
+  height: 130px;
+  background: #38372f;
+}
+
+.signal-box {
+  position: absolute;
+  top: 51px;
+  left: calc(70% - 10px);
+  width: 28px;
+  height: 28px;
+  background: #9d3329;
+  border: 3px solid #292821;
+  border-radius: 50%;
+}
+
+.signal-arm {
+  position: absolute;
+  left: 70%;
+  top: 87px;
+  width: 70px;
+  height: 9px;
+  background: #f5efe0;
+  border: 2px solid #292821;
+  transform: rotate(-12deg);
+  transform-origin: left center;
+}
+
+.comic-person {
+  position: absolute;
+  bottom: 20px;
+  width: 39px;
+  height: 88px;
+  z-index: 3;
+}
+
+.person-head {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 25px;
+  height: 27px;
+  border: 2px solid #292821;
+  border-radius: 50%;
+  background: #d6ae87;
+}
+
+.person-head::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  width: 25px;
+  height: 10px;
+  border: 2px solid #292821;
+  border-radius: 7px 7px 2px 2px;
+  background: #36352f;
+}
+
+.person-body {
+  position: absolute;
+  top: 26px;
+  left: 5px;
+  width: 31px;
+  height: 36px;
+  border: 2px solid #292821;
+  background: #444840;
+}
+
+.person-leg {
+  position: absolute;
+  top: 58px;
+  left: 9px;
+  width: 9px;
+  height: 28px;
+  background: #292821;
+  transform: rotate(8deg);
+}
+
+.leg-two {
+  left: 25px;
+  transform: rotate(-8deg);
+}
+
+.robber-one {
+  left: 20%;
+}
+
+.comic-sound {
+  position: absolute;
+  z-index: 4;
+  top: 91px;
+  left: 43%;
+  color: #9d3329;
+  font-family: "Special Elite", "Courier New", monospace;
+  font-size: 21px;
+  font-weight: bold;
+  transform: rotate(-8deg);
+}
+
+.stopped-scene {
+  background: #d6d0bd;
+}
+
+.stopped-train {
+  position: absolute;
+  bottom: 42px;
+  left: 7%;
+  width: 78%;
+  height: 63px;
+  background: #a34737;
+  border: 3px solid #292821;
+}
+
+.stopped-window {
+  display: inline-block;
+  width: 14%;
+  height: 20px;
+  margin: 8px 0 0 6%;
+  background: #f1e4b9;
+  border: 2px solid #292821;
+}
+
+.stopped-wheel {
+  position: absolute;
+  bottom: -15px;
+  left: 14%;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #8d887b;
+  border-radius: 50%;
+  background: #292821;
+}
+
+.wheel-right {
+  left: 72%;
+}
+
+.guard-person {
+  right: 7%;
+}
+
+.stop-sound {
+  position: absolute;
+  right: 8px;
+  bottom: 52px;
+  color: #9d3329;
+  font-family: "Special Elite", monospace;
+  font-size: 18px;
+  font-weight: bold;
+  transform: rotate(-7deg);
+}
+
+.money-comic-scene {
+  background: #d6d0bd;
+}
+
+.cash-bag {
+  position: absolute;
+  bottom: 34px;
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 60px;
+  background: #b9a16b;
+  border: 2px solid #292821;
+  border-radius: 10px 10px 16px 16px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.bag-left {
+  left: 15%;
+  transform: rotate(-8deg);
+}
+
+.bag-middle {
+  left: 31%;
+  bottom: 39px;
+  transform: rotate(4deg);
+}
+
+.bag-right {
+  left: 47%;
+  transform: rotate(-3deg);
+}
+
+.robber-two {
+  right: 13%;
+}
+
+.escape-scene {
+  background: #d7d0bc;
+}
+
+.hill {
+  position: absolute;
+  bottom: 20px;
+  width: 70%;
+  height: 100px;
+  border-radius: 50% 50% 0 0;
+  background: #9da083;
+}
+
+.hill-one {
+  left: -15%;
+}
+
+.hill-two {
+  right: -25%;
+  background: #7e896f;
+}
+
+.escape-car {
+  position: absolute;
+  z-index: 3;
+  bottom: 47px;
+  left: 30%;
+  width: 39%;
+  height: 40px;
+  background: #8f3c30;
+  border: 3px solid #292821;
+  border-radius: 8px 14px 4px 4px;
+}
+
+.escape-car::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 18%;
+  width: 54%;
+  height: 24px;
+  background: #8f3c30;
+  border: 3px solid #292821;
+  border-bottom: 0;
+  transform: skew(-18deg);
+}
+
+.car-window {
+  position: absolute;
+  top: -18px;
+  left: 28%;
+  width: 23%;
+  height: 15px;
+  background: #e8dfc7;
+  border: 2px solid #292821;
+  z-index: 4;
+}
+
+.car-wheel {
+  position: absolute;
+  bottom: -13px;
+  left: 15%;
+  width: 22px;
+  height: 22px;
+  background: #292821;
+  border: 4px solid #8d887b;
+  border-radius: 50%;
+}
+
+.car-wheel-two {
+  left: 72%;
+}
+
+.dust {
+  position: absolute;
+  bottom: 44px;
+  width: 25px;
+  height: 14px;
+  background: #b7a98b;
+  border-radius: 50%;
+}
+
+.dust-one {
+  left: 18%;
+}
+
+.dust-two {
+  left: 23%;
+  bottom: 58px;
+}
+
+.farm-comic-scene {
+  background: #d6d0bd;
+}
+
+.farm-building-comic {
+  position: absolute;
+  left: 14%;
+  bottom: 20px;
+  width: 49%;
+  height: 94px;
+  background: #b9aa8b;
+  border: 3px solid #292821;
+}
+
+.farm-roof-comic {
+  position: absolute;
+  left: 10%;
+  bottom: 110px;
+  width: 0;
+  height: 0;
+  border-left: 105px solid transparent;
+  border-right: 105px solid transparent;
+  border-bottom: 70px solid #65513e;
+}
+
+.farm-window-comic {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  width: 25px;
+  height: 25px;
+  background: #e8dfc7;
+  border: 2px solid #292821;
+}
+
+.farm-door-comic {
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  width: 25px;
+  height: 46px;
+  background: #65513e;
+  border: 2px solid #292821;
+}
+
+.detective-person {
+  left: 64%;
+  bottom: 20px;
+}
+
+.detective-person .person-body {
+  background: #686b58;
+}
+
+.comic-note {
+  margin-top: 20px;
+  padding: 12px 15px;
+  background: #e4dcc9;
+  border-left: 4px solid #9d3329;
+  font-size: 12px;
+}
+
+.panel-description {
+  margin: 10px 3px 4px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .comic-page {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-wide {
+    grid-column: auto;
+  }
+
+  .comic-scene {
+    height: 205px;
+  }
+
+  .farm-roof-comic {
+    left: 4%;
+  }
+
+  .speech {
+    max-width: 165px;
+    font-size: 10px;
+  }
+}
